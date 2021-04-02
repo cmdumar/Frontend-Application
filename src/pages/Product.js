@@ -7,7 +7,6 @@ function Product() {
   const fetching = useSelector(s => s.fetching);
   const errors = useSelector(s => s.errors);
 
-
   let toRender;
 
   if (fetching) {
@@ -18,7 +17,7 @@ function Product() {
     toRender = (
       <>
         <Details />
-        <User user={product?.user} />
+        <User user={product?.user} company={product?.company} />
       </>
     );
   }
