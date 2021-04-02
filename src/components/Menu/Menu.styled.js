@@ -20,18 +20,16 @@ export const StyledMenu = styled.nav`
   }
 
   a {
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
     padding: 10px 20px;
     font-weight: bold;
-    letter-spacing: 0.5rem;
     color: #272e71;
     text-decoration: none;
     transition: color 0.3s linear;
 
     @media (max-width: 789px) {
       font-size: 1.5rem;
-      text-align: center;
     }
 
     &:hover {
