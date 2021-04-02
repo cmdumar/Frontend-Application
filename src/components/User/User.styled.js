@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const UserInfo = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 `;
 
 const Profile = styled.section`
@@ -13,7 +13,7 @@ const Profile = styled.section`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 50%;
+  height: 350px;
   background-color: white;
   border-radius: 5px;
 
@@ -36,7 +36,7 @@ const Profile = styled.section`
 `;
 
 const Map = styled.section`
-  height: 50%;
+  height: 350px;
   margin-top: 10px;
   background-color: white;
   border-radius: 5px;

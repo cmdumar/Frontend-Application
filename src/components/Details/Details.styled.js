@@ -20,8 +20,6 @@ const PMI = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
-  margin-top: 20px;
-  margin-bottom: 30px;
 
   p {
     font-size: 25px;
