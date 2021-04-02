@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import fetchProduct from '../../actions/product';
+import fetchTrl from '../../actions/trl';
 import logo from '../../assets/logo.svg';
 import Routes from '../../components/Routes';
 import { GlobalStyles } from '../../global';
@@ -19,6 +20,7 @@ function App() {
 
   useEffect(() => {
     dispatch(fetchProduct());
+    dispatch(fetchTrl());
   }, [dispatch]);
 
   return (

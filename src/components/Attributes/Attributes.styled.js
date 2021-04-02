@@ -5,6 +5,14 @@ const Attr = styled.section`
     margin: 10px 0;
     color: #445063;
   }
+
+  input {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
 `;
 
 const Tags = styled.div`
@@ -21,4 +29,19 @@ const Tags = styled.div`
   }
 `;
 
-export { Attr, Tags };
+const EditBtns = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    padding: 3px 5px;
+    margin: 0 3px;
+    background-color: #272e71;
+    border: 1px solid #272e71;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+`;
+
+export { Attr, Tags, EditBtns };
