@@ -3,7 +3,7 @@ import setFetching from './fetching';
 import { SET_PRODUCT } from './types';
 import API from '../api/get';
 
-const setProduct = product => ({
+export const setProduct = product => ({
   type: SET_PRODUCT,
   product,
 });

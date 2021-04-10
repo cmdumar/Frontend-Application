@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import API from '../../api/get';
 import { Attr, Tags, EditBtns } from './Attributes.styled';
+import { setProduct } from '../../actions/product';
 
-function Attributes({ attr }) {
-  const [categories, setCategories] = useState(attr.categories);
-  const [models, setModels] = useState(attr.businessModels);
-  const [TRL, setTrl] = useState(attr.trl);
+function Attributes({ product }) {
+  const [categories, setCategories] = useState(product.categories);
+  const [models, setModels] = useState(product.businessModels);
+  const [TRL, setTrl] = useState(product.trl);
+  const dispatch = useDispatch();
 
   const [edit, setEdit] = useState(false);
   const trl = useSelector(s => s.trl);
@@ -42,8 +44,6 @@ function Attributes({ attr }) {
 
     const filter = trl.filter(i => i.name === value);
 
-    console.log('filter', filter);
-
     setTrl(filter[0]);
   }
 
@@ -56,10 +56,12 @@ function Attributes({ attr }) {
 
     try {
       const res = await API.put('/product/6781/', JSON.stringify(data));
-      console.log(res);
-      alert('Success');
+      if (res.status === 200) {
+        alert('Success');
+        dispatch(setProduct(res.data));
+      }
     } catch(err) {
-      console.log('error', err);
+      alert(err);
     }
 
     setEdit(false);

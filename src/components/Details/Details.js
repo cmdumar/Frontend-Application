@@ -25,7 +25,7 @@ function Details() {
       </Tab>
       <TabContent>
         {tab === 'desc' && <p>{product.description}</p>}
-        {tab === 'attr' && <Attributes attr={product} />}
+        {tab === 'attr' && <Attributes product={product} />}
       </TabContent>
     </ProductDetails>
   );
